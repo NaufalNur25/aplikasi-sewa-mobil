@@ -1,0 +1,19 @@
+{
+    "name": "naufal/quiz-project",
+    "description": "A simple OOP PHP login project",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "naufal",
+            "email": "naufal.nurhafizh.10.01@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
