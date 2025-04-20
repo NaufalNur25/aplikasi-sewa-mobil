@@ -46,7 +46,7 @@ Ini adalah project sederhana berbasis PHP Native dengan pendekatan OOP (Object-O
 1. **Clone repository ini:**
 
    ```bash
-   git clone https://github.com/username/quiz-project.git
+   git clone https://github.com/NaufalNur25/auth-with-session
    cd quiz-project
    ```
 
