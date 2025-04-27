@@ -1,5 +1,4 @@
 # UTS Project - Naufal Nur Hafizh
-## Membuat Aplikasi Rental Mobil
 
 ## Informasi Mahasiswa
 
