@@ -2,6 +2,10 @@
 
 namespace App\Controllers;
 
+/**
+ * Nama: Naufal Nur Hafizh
+ * NPM: 223111015
+ */
 class SewaController extends Controller
 {
     const DATA_LIST = [

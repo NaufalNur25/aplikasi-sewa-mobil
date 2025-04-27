@@ -4,6 +4,10 @@ namespace App\Controllers;
 
 use App\Middleware\Authentication;
 
+/**
+ * Nama: Naufal Nur Hafizh
+ * NPM: 223111015
+ */
 class Controller
 {
     public function index()

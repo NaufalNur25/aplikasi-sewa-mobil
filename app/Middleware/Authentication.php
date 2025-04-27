@@ -2,6 +2,10 @@
 
 namespace App\Middleware;
 
+/**
+ * Nama: Naufal Nur Hafizh
+ * NPM: 223111015
+ */
 class Authentication
 {
     public static function check(?String $session = null)
