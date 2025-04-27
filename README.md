@@ -30,7 +30,7 @@ Ini adalah project sederhana berbasis PHP Native dengan pendekatan OOP (Object-O
 
    ```bash
    git clone https://github.com/NaufalNur25/aplikasi-sewa-mobil
-   cd quiz-project
+   cd uts-project
    ```
 
 2. **Install dependency dengan Composer:**
