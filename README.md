@@ -1,4 +1,5 @@
-# Quiz Project - Naufal Nur Hafizh
+# UTS Project - Naufal Nur Hafizh
+## Membuat Aplikasi Rental Mobil
 
 ## Informasi Mahasiswa
 
@@ -16,23 +17,6 @@ Ini adalah project sederhana berbasis PHP Native dengan pendekatan OOP (Object-O
 - Penyimpanan data berbasis file (tanpa MySQL)
 - Routing dasar menggunakan PHP Native
 
-## Struktur Direktori
-
-```
-.
-├── app/                    # Folder utama untuk semua class dan logic
-├── Middleware/             # Middleware seperti Authentication.php
-├── pages/                  # Halaman-halaman seperti Login.php, Register.php
-│   ├── Dashboard.php
-│   ├── Login.php
-│   └── Register.php
-├── public/                 # Folder publik berisi assets (JS, CSS, gambar, dll.)
-│   └── images/
-├── uploads/                # Folder untuk penyimpanan file yang diunggah
-├── index.php               # Entry point aplikasi
-├── composer.json           # Konfigurasi autoload Composer
-```
-
 ## Persyaratan Sistem
 
 - PHP 7.4 atau lebih baru
@@ -46,7 +30,7 @@ Ini adalah project sederhana berbasis PHP Native dengan pendekatan OOP (Object-O
 1. **Clone repository ini:**
 
    ```bash
-   git clone https://github.com/NaufalNur25/auth-with-session
+   git clone https://github.com/NaufalNur25/aplikasi-sewa-mobil
    cd quiz-project
    ```
 
