@@ -9,6 +9,13 @@
 
 <body class="bg-light">
 
+    <nav class="navbar bg-body-tertiary navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand">Rental Mobil Online</a>
+            <a href="/dashboard?user=guest" class="btn btn-outline-secondary btn-lg px-5">Lihat mobil</a>
+        </div>
+    </nav>
+
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -40,26 +47,6 @@
                                 <input type="text" name="phone" class="form-control" value="<?php echo isset($_SESSION['old_data']['phone']) ? htmlspecialchars($_SESSION['old_data']['phone']) : ''; ?>" required>
                                 <?php if (isset($_SESSION['error']['phone'])) {
                                     echo '<small class="text-danger">' . $_SESSION['error']['phone'] . '</small>';
-                                } ?>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Tanggal Lahir</label>
-                                <input type="date" name="birthdate" class="form-control" value="<?php echo isset($_SESSION['old_data']['birthdate']) ? htmlspecialchars($_SESSION['old_data']['birthdate']) : ''; ?>" required>
-                                <?php if (isset($_SESSION['error']['birthdate'])) {
-                                    echo '<small class="text-danger">' . $_SESSION['error']['birthdate'] . '</small>';
-                                } ?>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Jenis Kelamin</label>
-                                <select name="gender" class="form-select" required>
-                                    <option value="">-- Pilih --</option>
-                                    <option value="Pria" <?php echo (isset($_SESSION['old_data']['gender']) && $_SESSION['old_data']['gender'] == 'Pria') ? 'selected' : ''; ?>>Pria</option>
-                                    <option value="Wanita" <?php echo (isset($_SESSION['old_data']['gender']) && $_SESSION['old_data']['gender'] == 'Wanita') ? 'selected' : ''; ?>>Wanita</option>
-                                </select>
-                                <?php if (isset($_SESSION['error']['gender'])) {
-                                    echo '<small class="text-danger">' . $_SESSION['error']['gender'] . '</small>';
                                 } ?>
                             </div>
 

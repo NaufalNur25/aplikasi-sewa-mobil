@@ -8,6 +8,12 @@
 </head>
 
 <body class="bg-light">
+    <nav class="navbar bg-body-tertiary navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand">Rental Mobil Online</a>
+            <a href="/dashboard?user=guest" class="btn btn-outline-secondary btn-lg px-5">Lihat mobil</a>
+        </div>
+    </nav>
 
     <div class="container py-5">
         <div class="row justify-content-center">

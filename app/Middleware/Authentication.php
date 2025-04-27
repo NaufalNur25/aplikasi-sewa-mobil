@@ -4,7 +4,7 @@ namespace App\Middleware;
 
 class Authentication
 {
-    public static function check()
+    public static function check(?String $session = null)
     {
         if (session_status() === PHP_SESSION_NONE) {
             session_start();

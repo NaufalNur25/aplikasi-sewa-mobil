@@ -13,8 +13,10 @@ class Controller
         echo "Welcome to the Dashboard!";
     }
 
-    public function loadView(String $name)
+    public function view(String $name, array $data = [])
     {
+        extract($data);
+
         include __DIR__ . "/../../public/pages/" . $name . ".php";
     }
 

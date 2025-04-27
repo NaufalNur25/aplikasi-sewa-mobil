@@ -6,6 +6,11 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $this->loadView("Dashboard");
+        $this->view("Dashboard");
+    }
+
+    public function landing()
+    {
+        $this->view('Landing');
     }
 }

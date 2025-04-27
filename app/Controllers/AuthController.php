@@ -6,12 +6,12 @@ class AuthController extends Controller
 {
     public function login()
     {
-        $this->loadView("Login");
+        $this->view("Login");
     }
 
     public function register()
     {
-        $this->loadView("Register");
+        $this->view("Register");
     }
 
     public function registerAction()
@@ -27,18 +27,14 @@ class AuthController extends Controller
         $fullname   = $_POST['fullname'] ?? '';
         $email      = $_POST['email'] ?? '';
         $phone      = $_POST['phone'] ?? '';
-        $birthdate  = $_POST['birthdate'] ?? '';
-        $gender     = $_POST['gender'] ?? '';
         $password   = $_POST['password'] ?? '';
         $confirm    = $_POST['password_confirmation'] ?? '';
         $photo      = $_FILES['photo'] ?? null;
 
-        if (!$fullname || !$email || !$phone || !$birthdate || !$gender || !$password || !$confirm) {
+        if (!$fullname || !$email || !$phone || !$password || !$confirm) {
             if (!$fullname) $_SESSION['error']['fullname'] = "Field nama lengkap wajib diisi.";
             if (!$email) $_SESSION['error']['email'] = "Field email wajib diisi.";
             if (!$phone) $_SESSION['error']['phone'] = "Field nomor telepon wajib diisi.";
-            if (!$birthdate) $_SESSION['error']['birthdate'] = "Field tanggal lahir wajib diisi.";
-            if (!$gender) $_SESSION['error']['gender'] = "Field jenis kelamin wajib diisi.";
 
             $_SESSION['old_data'] = $_POST;
             header("Location: /register");
@@ -67,8 +63,6 @@ class AuthController extends Controller
             'fullname' => $fullname,
             'email' => $email,
             'phone' => $phone,
-            'birthdate' => $birthdate,
-            'gender' => $gender,
             'password' => password_hash($password, PASSWORD_DEFAULT),
             'photo' => $photoName
         ];
@@ -78,7 +72,7 @@ class AuthController extends Controller
         $_SESSION['success'] = "Pendaftaran berhasil. Silakan login.";
         unset($_SESSION['old_data']);
         unset($_SESSION['error']);
-        header("Location: /");
+        header("Location: /login");
         exit;
     }
 
@@ -96,7 +90,7 @@ class AuthController extends Controller
 
         if (!isset($_SESSION['users'][$email])) {
             $_SESSION['error'] = "Email/Kata sandi salah.";
-            header("Location: /");
+            header("Location: /login");
             exit;
         }
 
@@ -104,7 +98,7 @@ class AuthController extends Controller
 
         if (!password_verify($password, $user['password'])) {
             $_SESSION['error'] = "Email/Kata sandi salah.";
-            header("Location: /");
+            header("Location: /login");
             exit;
         }
 
